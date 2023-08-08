@@ -3,6 +3,16 @@
 	"EngineAssociation": "{DB98C011-AD42-0DE7-FCDF-B1A56BA9180D}",
 	"Category": "",
 	"Description": "",
+	"Modules": [
+		{
+			"Name": "Elemental_VR",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "OpenXR",
