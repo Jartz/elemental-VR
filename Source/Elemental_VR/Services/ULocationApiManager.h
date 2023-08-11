@@ -7,5 +7,5 @@ class ULocationApiManager : public UObject
 {
 	GENERATED_BODY()
 public:
-	bool Send(FString value);
+	bool Send(FString value,FString LocationHead);
 };

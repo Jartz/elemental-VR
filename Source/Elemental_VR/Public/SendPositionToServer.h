@@ -15,7 +15,7 @@ class ELEMENTAL_VR_API USendPositionToServer : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 	UFUNCTION(BlueprintCallable,Category="RestAPI")
-	static bool SendLocation(FString Location);
+	static bool SendLocation(FString PositionArrayString,FString LocationHead);
 	void OnResponseReceived(FHttpRequestPtr Request, FHttpResponsePtr Response, bool bWasSuccessful);
 	
 };

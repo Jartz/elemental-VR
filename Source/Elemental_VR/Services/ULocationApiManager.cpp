@@ -4,11 +4,13 @@
 
 
 
-bool ULocationApiManager::Send(FString value)
+bool ULocationApiManager::Send(FString value,FString LocationHead)
 {
 		const FString Url = TEXT("https://dev.biotrade.app/api/location");
 		TSharedPtr<FJsonObject> JsonObject = MakeShareable(new FJsonObject);
 		JsonObject->SetStringField(TEXT("location"), value);
+		JsonObject->SetStringField(TEXT("location_head"), LocationHead);
+		JsonObject->SetStringField(TEXT("type"), TEXT("Circle"));
 	
 		FString JsonString = "";
 		TSharedRef<TJsonWriter<>> JsonWriter = TJsonWriterFactory<>::Create(&JsonString);
