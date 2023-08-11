@@ -9,4 +9,6 @@ class UFileRepository : public UObject
 public:
 	void DownloadFile(const FString& FileURL, const FString& SavePath);
 	void OnFileDownloaded(FHttpRequestPtr Request, FHttpResponsePtr Response, bool bWasSuccessful, FString SavePath);
+	bool CheckFileExistence(const FString& FileName);
+	void ValidateModelOnnx();
 };
